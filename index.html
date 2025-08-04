@@ -1,30 +1,74 @@
 <!DOCTYPE html>
 <html lang="zh-HK">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>北歐設計與文化慢旅 🌙 行程與消費記錄</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#20415a">
+
+  <!-- Confetti for completion celebration -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
-  <header>北歐設計與文化慢旅 🌙<br>行程與消費記錄<br>2025 年 8 月</header>
-  <main id="trip-container">載入中...</main>
-  <section id="expenses">
-    <h2>💰 消費記錄</h2>
-    <form id="expense-form">
-      <input type="text" id="item" placeholder="項目" required>
-      <input type="number" id="amount" placeholder="金額" required>
-      <select id="currency">
-        <option value="HKD">HKD</option>
-        <option value="EUR">EUR</option>
-        <option value="DKK">DKK</option>
-      </select>
-      <button type="submit">新增</button>
-    </form>
-    <ul id="expense-list"></ul>
-    <p id="total-expenses">總開支: HKD 0 / 15,000</p>
-  </section>
+  <header>
+    <h1>北歐設計與文化慢旅 🌙<br>行程與消費記錄</h1>
+    <p>2025 年 8 月</p>
+  </header>
 
-  <script src="script-v4.js" defer></script>
+  <!-- Itinerary Section -->
+  <main>
+    <section>
+      <h2>行程總覽</h2>
+      <div id="trip-container" class="trip-container">
+        <p>Loading itinerary...</p>
+      </div>
+    </section>
+
+    <!-- Expense Tracker -->
+    <section>
+      <h2>消費記錄 💰</h2>
+      <p>總預算：<strong>HKD 15,000</strong></p>
+      <p>已用金額：<strong id="total-hkd">0</strong> HKD</p>
+      <p>剩餘金額：<strong id="remaining-hkd">15000</strong> HKD</p>
+
+      <table id="expenses-table" border="1" style="width:100%; margin-top:10px;">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>項目</th>
+            <th>原幣金額</th>
+            <th>折算港幣</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JS will populate here -->
+        </tbody>
+      </table>
+
+      <div style="margin-top: 15px;">
+        <button id="export-json">匯出 JSON</button>
+        <button id="export-csv">匯出 CSV</button>
+        <button id="complete-trip">完成行程 🎉</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p style="text-align:center; margin-top:20px;">© 2025 Nordic Trip Planner V4</p>
+  </footer>
+
+  <!-- Service Worker for PWA -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+
+  <!-- Main Script -->
+  <script src="script-v4.js"></script>
 </body>
 </html>
