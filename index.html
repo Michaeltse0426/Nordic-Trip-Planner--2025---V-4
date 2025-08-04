@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="zh-HK">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>北歐設計與文化慢旅 – 行程與消費記錄 🌙</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="manifest" href="manifest.json">
-    <script src="scripts/app.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>北歐設計與文化慢旅 🌙 行程與消費記錄</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>北歐設計與文化慢旅 🌙<br>行程與消費記錄</h1>
-        <h2>2025 年 8 月</h2>
-    </header>
-    <main id="app">
-        <p>Loading itinerary and expenses tracker...</p>
-    </main>
+  <header>北歐設計與文化慢旅 🌙<br>行程與消費記錄<br>2025 年 8 月</header>
+  <main id="trip-container">載入中...</main>
+  <section id="expenses">
+    <h2>💰 消費記錄</h2>
+    <form id="expense-form">
+      <input type="text" id="item" placeholder="項目" required>
+      <input type="number" id="amount" placeholder="金額" required>
+      <select id="currency">
+        <option value="HKD">HKD</option>
+        <option value="EUR">EUR</option>
+        <option value="DKK">DKK</option>
+      </select>
+      <button type="submit">新增</button>
+    </form>
+    <ul id="expense-list"></ul>
+    <p id="total-expenses">總開支: HKD 0 / 15,000</p>
+  </section>
+
+  <script src="script-v4.js" defer></script>
 </body>
 </html>
