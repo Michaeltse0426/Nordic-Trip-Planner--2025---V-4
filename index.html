@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-HK">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>北歐設計與文化慢旅 🌙 行程與消費記錄</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- PWA Manifest -->
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#20415a">
-
-  <!-- Confetti for completion celebration -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
   <header>
@@ -19,56 +13,20 @@
     <p>2025 年 8 月</p>
   </header>
 
-  <!-- Itinerary Section -->
   <main>
-    <section>
-      <h2>行程總覽</h2>
-      <div id="trip-container" class="trip-container">
-        <p>Loading itinerary...</p>
-      </div>
-    </section>
-
-    <!-- Expense Tracker -->
-    <section>
-      <h2>消費記錄 💰</h2>
-      <p>總預算：<strong>HKD 15,000</strong></p>
-      <p>已用金額：<strong id="total-hkd">0</strong> HKD</p>
-      <p>剩餘金額：<strong id="remaining-hkd">15000</strong> HKD</p>
-
-      <table id="expenses-table" border="1" style="width:100%; margin-top:10px;">
+    <div id="trip-container">載入中...</div>
+    <section id="expense-tracker">
+      <h2>💰 消費紀錄</h2>
+      <div id="expense-summary">每日預算 HKD 1,500 × 10天 = HKD 15,000</div>
+      <table id="expense-table">
         <thead>
-          <tr>
-            <th>#</th>
-            <th>項目</th>
-            <th>原幣金額</th>
-            <th>折算港幣</th>
-          </tr>
+          <tr><th>日期</th><th>項目</th><th>金額</th><th>貨幣</th><th>折合HKD</th></tr>
         </thead>
-        <tbody>
-          <!-- JS will populate here -->
-        </tbody>
+        <tbody></tbody>
       </table>
-
-      <div style="margin-top: 15px;">
-        <button id="export-json">匯出 JSON</button>
-        <button id="export-csv">匯出 CSV</button>
-        <button id="complete-trip">完成行程 🎉</button>
-      </div>
     </section>
   </main>
 
-  <footer>
-    <p style="text-align:center; margin-top:20px;">© 2025 Nordic Trip Planner V4</p>
-  </footer>
-
-  <!-- Service Worker for PWA -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js');
-    }
-  </script>
-
-  <!-- Main Script -->
   <script src="script-v4.js"></script>
 </body>
 </html>

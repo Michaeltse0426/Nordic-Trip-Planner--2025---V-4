@@ -1,22 +1,12 @@
 [
-  {
-    "date": "2025-08-10",
-    "city": "Copenhagen",
-    "activities": ["新港 Nyhavn", "小美人魚雕像", "阿美琳堡宮", "羅森堡宮"]
-  },
-  {
-    "date": "2025-08-11",
-    "city": "Copenhagen",
-    "activities": ["圓塔 Round Tower", "大理石教堂 Marble Church", "國家美術館 SMK"]
-  },
-  {
-    "date": "2025-08-12",
-    "city": "Copenhagen",
-    "activities": ["市政廳廣場", "提沃利花園", "丹麥設計博物館"]
-  },
-  {
-    "date": "2025-08-17",
-    "city": "Helsinki",
-    "activities": ["芬蘭國家博物館", "卡皮耶利咖啡館", "羅伊利海邊桑拿"]
-  }
+  { "date": "2025-08-10", "city": "Copenhagen", "activities": ["新港 Nyhavn", "小美人魚雕像", "阿美琳堡宮", "羅森堡宮"] },
+  { "date": "2025-08-11", "city": "Copenhagen", "activities": ["圓塔 Round Tower", "大理石教堂 Marble Church", "國家美術館 SMK"] },
+  { "date": "2025-08-12", "city": "Copenhagen", "activities": ["趣伏里公園", "阿美琳堡衛兵換崗", "丹麥設計博物館"] },
+  { "date": "2025-08-13", "city": "Copenhagen", "activities": ["大衛收藏館", "克里斯欽堡宮", "運河遊船"] },
+  { "date": "2025-08-14", "city": "赫爾辛基", "activities": ["赫爾辛基大教堂", "老市場廣場", "岩石教堂"] },
+  { "date": "2025-08-15", "city": "塔林", "activities": ["塔林舊城區", "聖奧拉夫教堂", "長街"] },
+  { "date": "2025-08-16", "city": "赫爾辛基", "activities": ["芬蘭堡海上要塞", "設計博物館", "烏斯別斯基大教堂"] },
+  { "date": "2025-08-17", "city": "赫爾辛基", "activities": ["芬蘭國家博物館", "卡皮耶利咖啡館", "羅伊利海邊桑拿"] },
+  { "date": "2025-08-18", "city": "赫爾辛基", "activities": ["阿拉斯海水泳池", "馬里美歌設計店", "Esplanadi 公園"] },
+  { "date": "2025-08-19", "city": "赫爾辛基", "activities": ["自由購物或重訪喜愛景點"] }
 ]
